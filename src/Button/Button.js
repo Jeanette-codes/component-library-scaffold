@@ -1,15 +1,15 @@
 import React from 'react';
 import './styles.css';
 
-const Button = ({ children, onClick }) => (
-  <div className={'test-button'} onClick={onClick}>
-    {children}
-  </div>
+export const Button = ({buttonText, onClick}) => (
+  <button className={'test-button'} onClick={onClick}>
+    {buttonText}
+  </button>
 );
 
 Button.propTypes = {
-  children: React.PropTypes.string.isRequired,
-  onClick: React.PropTypes.func,
+  buttonText: React.PropTypes.string.isRequired,
+  onClick:    React.PropTypes.func,
 };
 
 export default Button;
